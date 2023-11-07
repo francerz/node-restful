@@ -4,6 +4,12 @@ FROM node:lts
 # Crear y cambiar el directorio actual a /app
 WORKDIR /app
 
+# Copiar archivo de dependencias
+COPY ./package*.json /app/
+
+# Instalar las dependencias
+RUN npm install
+
 # Copiamos el contenido del proyecto a /app
 COPY . /app/
 
