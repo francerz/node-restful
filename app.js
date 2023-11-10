@@ -1,13 +1,13 @@
-const http = require('http');
-
+const express = require('express');
+const app = express();
 const puerto = 80;
 
-const servidor = http.createServer(function (req, res) {
+app.get('/', function (req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('¡Hola Mundo!');
+    res.send('¡Prueba 123456789012!');
 });
 
-servidor.listen(puerto, function() {
+app.listen(puerto, function() {
     console.log("Servidor en espera http://localhost");
 });
