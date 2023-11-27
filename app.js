@@ -12,6 +12,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/temas', TemasController.indexGet);
+app.get('/temas/:id([0-9]+)', TemasController.itemGet);
 
 app.listen(puerto, function() {
     console.log("Servidor en espera http://localhost");

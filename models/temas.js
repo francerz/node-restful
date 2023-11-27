@@ -5,6 +5,9 @@ class TemasModel {
         let query = db('temas');
         return await query;
     }
+    static async consultarPorId(id) {
+        return await db('temas').where('id_tema', id);
+    }
 }
 
 module.exports = TemasModel;

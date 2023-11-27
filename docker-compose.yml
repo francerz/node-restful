@@ -6,7 +6,7 @@ services:
       - .:/app
       - /app/node_modules
     ports:
-      - 3000:80
+      - 3100:80
     command: ["npx", "nodemon", "app.js", "-L"]
   mysql:
     image: mysql:8.0.35
