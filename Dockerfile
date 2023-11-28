@@ -1,5 +1,5 @@
 # Utilizar imagen base de Node.js
-FROM node:lts
+FROM node:lts-slim
 
 # Crear y cambiar el directorio actual a /app
 WORKDIR /app
@@ -17,4 +17,4 @@ COPY . /app/
 EXPOSE 80
 
 # Iniciar aplicación
-CMD ["node", "app.js"]
+CMD ["npm", "start"]
