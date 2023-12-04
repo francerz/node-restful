@@ -62,7 +62,7 @@ docker-compose up -d
 Una vez que estén iniciados los servicios, ejecutar lo siguiente:
 
 ```sh
-docker run -it node-rest-web-service-1 sh
+docker exec -it node-rest-web-service-1 sh
 ```
 
 > **NOTA**  
