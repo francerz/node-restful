@@ -26,7 +26,7 @@ class TemasModel
     static async reemplazar(id, newData) {
         let db = await connectMysql();
         newData['id_tema'] = id;
-        await db.where('id_tema', id).del();
+        await db('temas').where('id_tema', id).del();
         await db.insert(newData).into('temas');
         return id;
     }
